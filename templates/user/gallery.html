@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block x %}
+<div class="fs-2 text-center">Gallery <b color="green">
+    <i class="fa-solid fa-image"></i>
+    </b>
+</div>
+<hr class="" style="height:5px;"/>
+<div class="row my-4" style="height:550px; padding-left:75px;">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+        <div class="row">
+            {% if data %}
+            {% for x in data %}
+            <div class="col-sm-4 my-4">
+                <div class="cad" style="width: 18rem;">
+  <img src="/{{x.gpic}}" class="card-img-top" style="border: 5px lime inset; border-radius:10px;" alt="...">
+  <div class="card-body">
+  </div>
+</div>
+            </div>
+            {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+    <div class="col-sm-1"></div>
+</div>
+{% endblock %}

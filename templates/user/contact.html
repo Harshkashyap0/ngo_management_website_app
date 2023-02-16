@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block x %}
+<div class="fs-2 text-center">Contact <b color="green">US</b>
+    <i class="fa-solid fa-address-card"></i>
+</div>
+<hr class="" style="height:5px;"/>
+<div class="">
+<div class="row my-3">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-5 frm">
+        {% if msg %}
+        <div class="alert alert-success">
+YOUR RESPONSE HAS BEEN RECORDED...
+        </div>
+        {% endif %}
+<form method="post">
+    {% csrf_token %}
+        <div class="input-group">
+             <i class="input-group-text mycolor text-light">
+                  <i class="fa-solid fa-user"></i>
+            </i>
+            <input type="text" name="name" required class="form-control" placeholder="USERNAME"/>
+        </div>
+         </br>
+                <div class="input-group">
+            <i class="input-group-text mycolor text-light">
+                <i class="fa-solid fa-user"></i>
+            </i>
+            <input type="email" required name="email" class="form-control" placeholder="EMAIL"/>
+        </div>
+         </br>
+
+     <div class="input-group">
+            <i class="input-group-text mycolor text-light">
+                <i class="fa-solid fa-user"></i>
+            </i>
+            <input type="number" name="mob" class="form-control" required placeholder="YOUR CONTACT NO."/>
+        </div>
+         </br>
+           <div class="input-group">
+            <i class="input-group-text mycolor text-light">
+                <i class="fa-solid fa-user"></i>
+            </i>
+            <textarea class="form-control" required placeholder="MESSAGE" name="msg"></textarea>
+        </div>
+        </br>
+        <input style=" width:200px; margin-left:175px;" type="submit" value="save" class="form-control mycolor" />
+         </br> </br>
+</form>
+</div>
+<div class="col-sm-5"></div>
+<div class="col-sm-1"></div>
+</div>
+{% endblock %}

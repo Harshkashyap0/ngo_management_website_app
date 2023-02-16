@@ -1,0 +1,163 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block x %}
+    <div class="row slider">
+    <div class="col-sm-12 s1">
+        <!--start slider-->
+        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="10000">
+      <img src="{% static '/images/as.jpg' %}" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+       <h5>SOMEONE IS NEEDING YOU</h5>
+        <p>Be the reason for someone's smile.</p>
+      </div>
+    </div>
+       {% for a in res %}
+    <div class="carousel-item" data-bs-interval="2000">
+     <img src="/{{a.spic}}" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>{{a.shead}}</h5>
+        <p>{{a.ssubject}}</p>
+      </div>
+    </div>
+      {% endfor %}
+
+    <div class="carousel-item">
+      <img src="..." class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Third slide label</h5>
+        <p>Some representative placeholder content for the third slide.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+    </div>
+    </div>
+<div class="row ncategory bg-light">
+  <div class="col-sm-1"></div>
+  <div class="col-sm-10">
+    <div class="row">
+      <!--loop-->
+      {% for i in data %}
+    <div class="col-sm-4 my-4">
+      <div class="card">
+        <img src="/{{i.bpicture}}" class="img-card-top"/>
+        <div class="card-body">
+          <h5 class="card-title">{{i.bname}}</h5>
+          <p>{{i.bdes}}</p>
+          <p class="btn btn-sm-mycolor">Date : {{i.bdate}}</p>
+        </div>
+      </div>
+    </div>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="col-sm-1"></div>
+</div>
+
+
+<div class="fs-2 text-center">Events
+    <i class="fa-solid fa-calendar-days"></i>
+</div>
+<div class="row" style="margin-left:140px;">
+            <div class="col-sm-4">
+                <div class="team-member box">
+                  <div class="img-box">
+                    <img src="{% static 'fodss.jpg' %}" alt="">
+                  </div>
+                  <div class="content">
+                    <p class="text-dark"><b>Food Distribution on weekends</b></p>
+                    <p class="text-muted">On every Weekend we ditribute food packets so that needy people do not sleep hungary. </p>
+                     </div>
+                      </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="team-member box">
+                <div class="img-box">
+                  <img src="{% static 'boks.jpg' %}" alt="">
+                </div>
+                <div class="content">
+                  <p class="text-dark"><b>Book and Stationary Distribution </b></p>
+                  <p class="text-muted">On every Thursday we ditribute books and stationary to children who cannot afford them.</p>
+                  </div>
+                </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="team-member box">
+              <div class="img-box">
+                <img src="{% static 'pad.jpg' %}" alt="">
+              </div>
+              <div class="content">
+                <p class="text-color"><b>Sanitary Distribution</b></p>
+                <p class="text-muted">For all the teen girls we distribute sanitary napkin and aware them about cleanliness and hygiene.</p>
+                </div>
+              </div>
+        </div>
+       </div>
+<div class="fs-2 text-center">Our <b>Volunteers</b>
+    <i class="fa-solid fa-address-card"></i>
+</div>
+<div class="row bg-light">
+  <div class="col-sm-1"></div>
+  <div class="col-sm-10">
+    <div class="row my-3">
+  <div class="col-sm-1"></div>
+  <div class="col-sm-10">
+    <div class="row">
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="card" style="width: 18rem;">
+  <img src="{% static 'ad.jpg' %}" class="card-img-top p-3" alt="..." height="300px" width="300" style="border-radius:300px;"/>
+  <div class="card-body">
+    <h5 class="card-title text-center">Archana Singh</h5>
+    <p class="card-text">A computer science graduate and a very dashing personality, always there to help the needy.</p>
+
+  </div>
+</div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card" style="width: 18rem;">
+ <img src="{% static 'shekhar.jpg' %}" class="card-img-top p-3" alt="..." height="300px" width="300" style="border-radius:300px;"/>
+  <div class="card-body">
+    <h5 class="card-title text-center">Shekhar Saini</h5>
+    <p class="card-text">A computer science graduate and a very dashing personality, always there to help the needy.</p>
+
+  </div>
+</div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card" style="width: 18rem;">
+  <img src="{% static 'lala.jpg' %}" class="card-img-top p-3" alt="..." height="300px" width="300" style="border-radius:300px;"/>
+  <div class="card-body">
+
+    <h5 class="card-title text-center">Harshit Srivastava</h5>
+    <p class="card-text">A computer science graduate and a very dashing personality, always there to help the needy.</p>
+
+  </div>
+</div>
+    </div>
+  </div>
+    </b>
+</div>
+  </div>
+  <div class="col-sm-1"></div>
+</div>
+  </div>
+  <div class="col-sm-1"></div>
+</div>
+
+{% endblock %}

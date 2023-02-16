@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block x %}
+<div class="fs-2 text-center">Membership <b color="green">
+    <i class="fa-solid fa-user-group"></i>
+    </b>
+</div>
+<hr class="" style="height:5px;"/>
+<div class="row my-4">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-5">
+        <form method="post" class="row " autocomplete="off" enctype="multipart/form-data" >
+            {% csrf_token %}
+            <div class="my-3 input-group">
+            <i class="input-group-text mycolor text-light">
+                  <i class="fa-solid fa-user"></i>
+            </i>
+            <input type="text" required name="mname" class="form-control" placeholder="Name"/>
+            </div></br>
+
+            <div class="my-3 input-group">
+            <i class="input-group-text mycolor text-light">
+                  <i class="fa-solid fa-truck"></i>
+            </i>
+            <input type="number" name="mcode" required class="form-control" placeholder="Pincode"/>
+            </div></br>
+            <div class="my-3 input-group">
+            <i class="input-group-text mycolor text-light">
+                  <i class="fa-solid fa-city"></i>
+            </i>
+            <select name="mcity" type="city" class="form-control">
+    <option>Select City</option>
+    {% for x in ct %}
+                <option>{{x.cityn}}</option>
+                {% endfor %}
+            </select>
+            </div></br>
+
+            <div class="my-3 input-group">
+            <i class="input-group-text mycolor text-light">
+                  <i class="fa-solid fa-envelope"></i>
+            </i>
+            <input type="email" name="memail" required class="form-control" placeholder="Email"/>
+            </div></br>
+            <div class="my-3 input-group">
+            <i class="input-group-text mycolor text-light">
+                 <i class="fa-solid fa-file-invoice"></i>
+            </i>
+                <input type="number" name="mbank" required class="form-control" placeholder="A/c No."/></div></br>
+            <div class="my-3 input-group">
+            <i class="input-group-text mycolor text-light">
+                  <i class="fa-solid fa-address-book"></i>
+            </i>
+                <input type="text" required name="mcompany" class="form-control" placeholder="Company Address"/></div></br>
+
+            <div class="my-3 input-group">
+            <i class="input-group-text mycolor text-light">
+                  <i class="fa-solid fa-address-book"></i>
+            </i>
+                <textarea class="form-control" name="madd" placeholder="Address"></textarea></div></br>
+            <center><input type="submit" class="form-control btn mycolor w-25" value="SUBMIT"/></center>
+
+        </form>
+    </div>
+    <div class="col-sm-5"></div>
+
+</div>
+
+
+{% endblock %}

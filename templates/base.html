@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ngo</title>
+    <link href="../static/hun.jpg" rel="icon"/>
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet"/>
+    <link href="{% static 'css/all.css' %}" rel="stylesheet"/>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <script src="{% static 'js/bootstrap.bundle.js' %}"></script>
+    <style>
+        .mycolor{
+        background:#1bfc46;
+        color:black;
+        font-family:
+        }
+        .text-mycolor
+        {
+        background:#382a41;
+        }
+        .ufooter{
+        }
+        .lfooter{
+        min-height:50px;
+        border-top:1px solid white;
+        line-height:50px;
+        }
+.box
+{
+	position: relative;
+	width: 280px;
+	height: 400px;
+	margin: 20px 0;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.box .img-box
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	clip-path: circle(400px at center 100px);
+	transition: 0.5s;
+	transition-delay: 0.5s;
+}
+.box:hover .img-box
+{
+	clip-path: circle(80px at center 100px);
+	transition-delay: 0s;
+}
+.box .img-box img
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.box .content
+{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 55%;
+	padding: 20px;
+	box-sizing: border-box;
+	text-align: center;
+}
+.box .content h2
+{
+	margin: 0;
+	padding: 0;
+}
+.box .content a
+{
+	text-decoration: none;
+	background: #000;
+	color: #fff;
+	padding: 5px;
+	display: inline-block;
+}
+.box .content h2,
+.box .content p,
+.box .content a
+{
+	opacity: 0;
+	transition: 0.5s;
+	transform: translateY(20px);
+}
+.box:hover .content h2
+{
+	opacity: 1;
+	transform: translateY(0);
+	transition-delay: 0.5s
+}
+ .box:hover .content p
+{
+	opacity: 1;
+	transform: translateY(0);
+	transition-delay: 0.7s
+}
+ .box:hover .content a
+{
+	opacity: 1;
+	transform: translateY(0);
+	transition-delay: 0.9s
+}
+.coll{
+color:#1bfc46;
+}
+
+    </style>
+</head>
+<body>
+    <div class="row mycolor">
+	    <div class="col-sm-3"></div>
+	    <div class="col-sm-3">
+	    <i class="fa-solid fa-envelope"></i>
+	    rstar1625@gmail.com</div>
+	    <div class="col-sm-3"></div>
+	    <div class="col-sm-3">
+            <a style="color:black;" href="https://www.facebook.com/kashyap.harsh.8/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a style="color:black;" href="https://twitter.com/voldeop" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+            <a style="color:black;" href="https://www.instagram.com/harsh____kashyap/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+    </div>
+    <div class="row header ">
+
+
+    </div>
+    <div class="row sticky-top">
+        <div class="col-sm-3">
+            <h1 class="text-center"><a class="navbar-brand" href="../home">
+    SAVE <i class="fa-solid fa-building-ngo"></i>
+            </a></h1>
+        </div>
+        <div class="col-sm-2"></div>
+        <div class="col-sm-7">
+            <nav class="navbar navbar-expand-lg fs-4">
+  <div class="container-fluid">
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav coll">
+        <li class="nav-item">
+            <a class="nav-link" href="../home/" style="font-family:sansserif">Home</></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../aboutus/" style="font-family:sansserif">About us</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" href="../contactus/" style="font-family:sansserif">Contact us</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" href="../gallery/" style="font-family:sansserif">Gallery</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" href="../video/" style="font-family:sansserif">Video</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../blog/" style="font-family:sansserif">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../membership/" style="font-family:sansserif">Membership</a>
+        </li>
+          <li class="nav-item">
+              <a class="nav-link" style="color:#382a41;" href="../donate"><i class="btn btn-sm mycolor">Donate Now &#10084;</i></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+        </div>
+        </div>
+    </div>
+
+
+    <div class="row ncategory"></div>
+        <div class="row content">
+            <div class="col-sm-12" >
+                </div>
+                </div>
+                {% block x %}
+
+                {% endblock x %}
+
+        <div class="foot">
+            <div class="ufooter">
+                <div class="row mycolor px-5">
+        <div class="col-sm-4">
+ <div class="fs-2 text-center"><i class="fa-solid fa-phone"></i>CONTACT US<b color="green">
+    </b>
+</div>
+            <br/>
+        </ul>
+            <ul>
+            <i class="fa-solid fa-location-pin"></i>  c-975 church road, Mumbai 52106 India
+        </ul>
+            <ul>
+            <i class="fa-solid fa-envelope"></i>
+                rstar1625@gmail.com
+        </ul>
+             <ul>
+        <i class="fa-solid fa-phone"></i>
+                 +0524869969
+        </ul>
+            <ul>
+            <a href="../contactus/" class="btn btn-sm bg-light">Leave us a Message...</a>
+            </ul>
+        </div>
+        <div class="col-sm-4">
+            <div class="fs-2 text-center"><i class="fa-solid fa-address-card"></i>ABOUT US<b color="green">
+    </b>
+</div>
+            <br/>
+            <p>We are team wanting to help the peoples by contributing our share.</p>
+</br>
+</br>
+             <a href="../aboutus/" class="btn btn-sm bg-light">Know More...</a>
+        </div>
+        <div class="col-sm-4">
+
+           <div class="fs-2 text-center"><i class="fa-solid fa-circle-dollar-to-slot"></i>DONATE<b color="green">
+    </b></br>
+               <img src="{% static 'qrqr.jpg' %}" style="height:150px; width:200px;" />
+</div>
+        </div>
+    </div>
+            </div>
+    <div class="row lfooter bg-primary">
+        <div class="col-sm-6 text-center text-light">&#169; SAVE.NGO All Rights Reserved. &nbsp; Designed by: harshkash2000@gmail.com</div>
+        <div class="col-sm-6 text-center text-light fs-3">
+            <a style="color:white;" href="https://www.facebook.com/kashyap.harsh.8/" target="_blank"> <i class="fa-brands fa-square-facebook"></i></a>
+            <a style="color:white;" href="https://twitter.com/voldeop" target="_blank"> <i class="fa-brands fa-square-twitter"></i></a>
+            <a style="color:white;" href="https://www.instagram.com/harsh____kashyap/" target="_blank"> <i class="fa-brands fa-square-instagram"></i></a>
+        </div>
+    </div>
+    </div>
+
+</body>
+</html>
